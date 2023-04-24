@@ -2,7 +2,7 @@ import math
 print("Welcome to BASE: An Online Banking Application")
 
 
-def signup():
+def signUp():
     global name
     global pin
     global currentBalance
@@ -18,10 +18,15 @@ def signup():
         if len(newPin) != 6:
             print("Error: Invalid PIN")
             print("The PIN must have 6 digits.")
-            signup()
+            signUp()
         else:
             pin = newPin
     print("Congratulations! You have successfully signed up")
 
 
-signup()
+def forgotPin():
+    recoverPin = str(input("Enter your new 6 digits Pin: "))
+    if len(recoverPin) != 6:
+        print("Error: Invalid PIN")
+        print("The PIN must have 6 digits.")
+        forgotPin()
