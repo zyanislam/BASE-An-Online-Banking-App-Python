@@ -37,4 +37,5 @@ def forgotPin():
         pin = recoverPin
 
 
-forgotPin()
+def balanceInterest(current, rate, time):
+    # A = Pe^(rt)
