@@ -6,5 +6,22 @@ def signup():
     global name
     global pin
     global currentBalance
-    name = str(input("Enter an username"))
-    pin = str(input("Enter your 6 digit PIN"))
+    name = str(input("Enter an username: "))
+    pin = str(input("Enter your 6 digit PIN: "))
+
+    if len(pin) == 6:
+        pin = pin
+    else:
+        print("Error: Invalid PIN")
+        print("The PIN must have 6 digits.")
+        newPin = str(input("Enter your 6 digit PIN: "))
+        if len(newPin) != 6:
+            print("Error: Invalid PIN")
+            print("The PIN must have 6 digits.")
+            signup()
+        else:
+            pin = newPin
+    print("Congratulations! You have successfully signed up")
+
+
+signup()
