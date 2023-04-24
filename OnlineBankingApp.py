@@ -13,12 +13,12 @@ def signUp():
     if len(pin) == 6:
         pin = pin
     else:
-        print("Error: Invalid PIN")
-        print("The PIN must have 6 digits.")
+        print("<< Error: Invalid PIN >>")
+        print("The PIN must have 6 digits.\n")
         newPin = str(input("Enter your 6 digit PIN: "))
         if len(newPin) != 6:
-            print("Error: Invalid PIN")
-            print("The PIN must have 6 digits.")
+            print("<< Error: Invalid PIN >>")
+            print("The PIN must have 6 digits.\n")
             signUp()
         else:
             pin = newPin
@@ -28,10 +28,13 @@ def signUp():
 def forgotPin():
     recoverPin = str(input("Enter your new 6 digits Pin: "))
     if len(recoverPin) != 6:
-        print("Error: Invalid PIN")
-        print("The PIN must have 6 digits.")
+        print("<< Error: Invalid PIN >>")
+        print("The PIN must have 6 digits.\n")
         forgotPin()
     else:
         print("Congratulations! The new PIN has been stored")
         print("Please Sign-In Now!")
         pin = recoverPin
+
+
+forgotPin()
