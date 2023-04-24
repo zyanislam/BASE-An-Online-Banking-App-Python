@@ -6,6 +6,7 @@ def signUp():
     global name
     global pin
     global currentBalance
+
     name = str(input("Enter an username: "))
     pin = str(input("Enter your 6 digit PIN: "))
 
@@ -30,3 +31,7 @@ def forgotPin():
         print("Error: Invalid PIN")
         print("The PIN must have 6 digits.")
         forgotPin()
+    else:
+        print("Congratulations! The new PIN has been stored")
+        print("Please Sign-In Now!")
+        pin = recoverPin
