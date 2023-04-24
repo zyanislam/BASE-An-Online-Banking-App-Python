@@ -7,7 +7,7 @@ def signUp():
     global pin
     global currentBalance
 
-    user = str(input("Enter an username: "))
+    user = str(input("Enter your username: "))
     pin = str(input("Enter your 6 digit PIN: "))
 
     if len(pin) == 6:
