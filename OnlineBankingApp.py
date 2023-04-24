@@ -45,3 +45,5 @@ def balanceInterest(current, rate, time):
     time = float(time)
     rt = rate * time
     expo = math.exp(rt)
+    a = current * expo
+    return a
