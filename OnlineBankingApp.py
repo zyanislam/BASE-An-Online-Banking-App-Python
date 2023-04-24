@@ -41,3 +41,7 @@ def balanceInterest(current, rate, time):
     # Compound Interest Formula
     # A = Pe^(rt)
     current = float(current)
+    rate = float(rate)
+    time = float(time)
+    rt = rate * time
+    expo = math.exp(rt)
