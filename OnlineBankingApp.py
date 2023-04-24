@@ -3,11 +3,11 @@ print("Welcome to BASE: An Online Banking Application")
 
 
 def signUp():
-    global name
+    global user
     global pin
     global currentBalance
 
-    name = str(input("Enter an username: "))
+    user = str(input("Enter an username: "))
     pin = str(input("Enter your 6 digit PIN: "))
 
     if len(pin) == 6:
@@ -50,3 +50,4 @@ def balanceInterest(current, rate, time):
 
 
 def login():
+    user1 = str(input("Enter your username: "))
