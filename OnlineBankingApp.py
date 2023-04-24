@@ -38,4 +38,6 @@ def forgotPin():
 
 
 def balanceInterest(current, rate, time):
+    # Compound Interest Formula
     # A = Pe^(rt)
+    current = float(current)
