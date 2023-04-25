@@ -53,25 +53,44 @@ def balanceInterest(current, rate, time):
 def login():
     user1 = str(input("Enter your username: "))
     pin1 = str(input("Enter your password: "))
+
     if user1 == user and pin1 == pin:
         print("Welcome to BASE: An Online Banking Application" + " " + user + "\n")
         print("Choose your option from the menu below")
         menu = ["1: Check Your Account Balance", "2: Withdraw Money", "3: Transfer Money",
                 "4: Deposit Money", "5: Deposite Interest Rate", "6: Calculate Compound Interest"]
+        for a in menu:
+            print(a)
+        choice = int(input("Enter your choice: "))
+        deposite = 0
+        withdraw = 0
+        currentBalance = 0
+
+        if choice == 1:
+            print("Current Account Balance: " + currentBalance)
+        elif choice == 2:
+            print("Current Account Balance: " + currentBalance)
+        elif choice == 3:
+            print("Current Account Balance: " + currentBalance)
+        elif choice == 4:
+            print("Current Account Balance: " + currentBalance)
+            deposite = int(input("Enter the ammount you want to deposit: "))
+            currentBalance = currentBalance + deposite
+            int("Current Account Balance: " + currentBalance)
 
     else:
         print("<< Error: Your User or Password does not match or it does not exist. >>")
         print("Have you created your BASE Account?\n")
         list1 = ["1: Yes", "2: No"]
-        for i in list1:
-            print(i)
+        for b in list1:
+            print(b)
 
         inp = int(input("Enter your choice: "))
         if inp == 1:
             list2 = ["1: Retry to Login into your BASE Account",
                      "2: Forgot your password?"]
-            for j in list2:
-                print(j)
+            for c in list2:
+                print(c)
 
             choice = int(input("Enter your choice: "))
             if choice == 1:
