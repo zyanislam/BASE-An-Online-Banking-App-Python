@@ -28,14 +28,15 @@ def signUp():
 
 def forgotPin():
     recoverPin = str(input("Enter your new 6 digits Pin: "))
-    if len(recoverPin) != 6:
+    if len(recoverPin) == 6:
+        pin = recoverPin
+        print("Congratulations! The new PIN has been stored")
+        print("Please Sign-In Now!")
+        login()
+    else:
         print("<< Error: Invalid PIN >>")
         print("The PIN must have 6 digits.\n")
         forgotPin()
-    else:
-        print("Congratulations! The new PIN has been stored")
-        print("Please Sign-In Now!")
-        pin = recoverPin
 
 
 def balanceInterest(current, rate, time):
