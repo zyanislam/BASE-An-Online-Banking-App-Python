@@ -1,3 +1,4 @@
+from asyncio import wait
 import math
 print("Welcome to BASE: An Online Banking Application")
 
@@ -55,18 +56,20 @@ def login():
     if user1 == user and pin1 == pin:
         print("Welcome to BASE: An Online Banking Application" + " " + user + "\n")
         print("Choose your option from the menu below")
+        menu = ["1: Check Your Account Balance", "2: Withdraw Money", "3: Transfer Money",
+                "4: Deposit Money", "5: Deposite Interest Rate", "6: Calculate Compound Interest"]
 
     else:
         print("<< Error: Your User or Password does not match or it does not exist. >>")
-        print("Have you created your BASE Account.\n")
-        list1 = ["1: Yes\n", "2: Non\n"]
+        print("Have you created your BASE Account?\n")
+        list1 = ["1: Yes", "2: No"]
         for i in list1:
             print(i)
 
         inp = int(input("Enter your choice: "))
         if inp == 1:
-            list2 = ["1: Retry to Login into your BASE Account\n",
-                     "2: Forgot your password?\n"]
+            list2 = ["1: Retry to Login into your BASE Account",
+                     "2: Forgot your password?"]
             for j in list2:
                 print(j)
 
@@ -77,3 +80,10 @@ def login():
                 forgotPin()
             else:
                 print("<< ERROR: Your Choice " + choice + "is not valid. >>")
+                login()
+
+        elif inp == 2:
+            print("Please create your BASE Account first.")
+            print(">> Redirecting to BASE SignUp.")
+            wait(500)
+            signUp()
