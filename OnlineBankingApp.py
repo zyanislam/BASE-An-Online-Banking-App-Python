@@ -55,3 +55,25 @@ def login():
     if user1 == user and pin1 == pin:
         print("Welcome to BASE: An Online Banking Application" + " " + user + "\n")
         print("Choose your option from the menu below")
+
+    else:
+        print("<< Error: Your User or Password does not match or it does not exist. >>")
+        print("Have you created your BASE Account.\n")
+        list1 = ["1: Yes\n", "2: Non\n"]
+        for i in list1:
+            print(i)
+
+        inp = int(input("Enter your choice: "))
+        if inp == 1:
+            list2 = ["1: Retry to Login into your BASE Account\n",
+                     "2: Forgot your password?\n"]
+            for j in list2:
+                print(j)
+
+            choice = int(input("Enter your choice: "))
+            if choice == 1:
+                login()
+            elif choice == 2:
+                forgotPin()
+            else:
+                print("<< ERROR: Your Choice " + choice + "is not valid. >>")
