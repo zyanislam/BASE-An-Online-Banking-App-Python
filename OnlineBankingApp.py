@@ -51,3 +51,7 @@ def balanceInterest(current, rate, time):
 
 def login():
     user1 = str(input("Enter your username: "))
+    pin1 = str(input("Enter your password: "))
+    if user1 == user and pin1 == pin:
+        print("Welcome to BASE: An Online Banking Application" + " " + user + "\n")
+        print("Choose your option from the menu below")
