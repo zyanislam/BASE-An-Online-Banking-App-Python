@@ -1,4 +1,3 @@
-from asyncio import wait
 import math
 print("Welcome to BASE: An Online Banking Application")
 
@@ -105,5 +104,4 @@ def login():
         elif inp == 2:
             print("Please create your BASE Account first.")
             print(">> Redirecting to BASE SignUp.")
-            wait(500)
             signUp()
