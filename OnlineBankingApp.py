@@ -196,16 +196,19 @@ def mainmenu():
 
 
 def exit():
-    print("Do you want to Exit?")
+    print("Do you want to conduct transaction?")
     print("Y: Yes")
     print("N: No")
     answer = str(input("Enter your choice: "))
 
     if answer == "Y":
-        print("Thank you for using BASE.")
-    elif answer == "N":
         login()
+    elif answer == "N":
+        print("Thank you for using BASE.")
     else:
         print("<< ERROR: Your Choice " +
               str(answer) + "is not valid. >>")
         mainmenu()
+
+
+mainmenu()
