@@ -88,11 +88,15 @@ def login():
                 if amount > currentBalance:
                     print(
                         "Your current account balace is not sufficient for a transaction.")
+                    login()
                 else:
                     currentBalance = currentBalance - amount
                     print(str(withdraw) +
                           " has been transfered from your current account to amount " + destination)
                     print("Current Account Balance: " + str(currentBalance))
+            else:
+                print("<< Error: Your Account No is invalid.")
+                login()
 
         elif choice == 4:
             print("Current Account Balance: " + str(currentBalance))
