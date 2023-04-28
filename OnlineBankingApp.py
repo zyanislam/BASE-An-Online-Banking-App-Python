@@ -106,6 +106,12 @@ def login():
 
         elif choice == 5:
             print("Current Account Balance: " + str(currentBalance))
+            if deposite > 50000:
+                rate = 3
+            elif deposite > 30000:
+                rate = 2
+            else:
+                rate = 1.5
 
     else:
         print("<< Error: Your User or Password does not match or it does not exist. >>")
