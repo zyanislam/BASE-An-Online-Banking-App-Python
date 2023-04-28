@@ -183,4 +183,22 @@ def mainmenu():
     print("1: Sign Up to BASE")
     print("2: Login to your BASE Account")
     option_mm = int(input("Enter your choice: "))
-    if
+    if option_mm == 1:
+        signUp()
+    elif option_mm == 2:
+        login()
+    else:
+        print("<< ERROR: Your Choice " +
+              str(option_mm) + "is not valid. >>")
+        mainmenu()
+
+
+def exit():
+    print("Do you want to Exit?")
+    print("Y: Yes")
+    print("N: No")
+    answer = str(input("Enter your choice: "))
+
+    if answer == "Y":
+        log
+    elif answer == "N":
