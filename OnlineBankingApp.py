@@ -128,7 +128,8 @@ def login():
                     ratex = 2/100
                 else:
                     ratex = 1.5/100
-
+                print("Current Account Balance in " + timing +
+                      " years will be " + str(deposite) ".")
     else:
         print("<< Error: Your User or Password does not match or it does not exist. >>")
         print("Have you created your BASE Account?\n")
