@@ -68,18 +68,29 @@ def login():
 
         if choice == 1:
             print("Current Account Balance: " + currentBalance)
+
         elif choice == 2:
             print("Current Account Balance: " + currentBalance)
             withdraw = int(input("Enter the amount you want to withdraw: "))
             if withdraw > currentBalance:
                 print("Your current account balace is not sufficient for a transaction.")
             else:
-                currentBalance = currentBalance + withdraw
+                currentBalance = currentBalance - withdraw
                 print(str(withdraw) +
                       " has been withdrawn from your current account.")
                 print("Current Account Balance: " + currentBalance)
+
         elif choice == 3:
             print("Current Account Balance: " + currentBalance)
+            destination = str(input("Enter the 8 digit account no: "))
+            if len(destination) == 8:
+                amount = int(input("Enter the amount you want to transfer: "))
+                if amount > currentBalance:
+                    print(
+                        "Your current account balace is not sufficient for a transaction.")
+                else:
+                    currentBalance = currentBalance - amount
+
         elif choice == 4:
             print("Current Account Balance: " + currentBalance)
             deposite = int(input("Enter the amount you want to deposit: "))
