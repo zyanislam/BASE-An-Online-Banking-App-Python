@@ -58,7 +58,7 @@ def login():
         print("Welcome to BASE: An Online Banking Application" + " " + user + "\n")
         print("Choose your option from the menu below")
         menu = ["1: Check Your Account Balance", "2: Withdraw Money", "3: Transfer Money",
-                "4: Deposit Money", "5: Deposite Interest Rate", "6: Calculate Compound Interest"]
+                "4: Deposit Money", "5: Check Deposite Interest Rate", "6: Calculate Compound Interest"]
         for a in menu:
             print(a)
         choice = int(input("Enter your choice: "))
@@ -105,13 +105,13 @@ def login():
             print("Current Account Balance: " + str(currentBalance))
 
         elif choice == 5:
-            print("Current Account Balance: " + str(currentBalance))
             if deposite > 50000:
                 rate = 3
             elif deposite > 30000:
                 rate = 2
             else:
                 rate = 1.5
+            print("Your Current Deposite Interest Rate: " + str(rate) + " %")
 
     else:
         print("<< Error: Your User or Password does not match or it does not exist. >>")
