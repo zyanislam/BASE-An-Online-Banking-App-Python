@@ -113,6 +113,14 @@ def login():
                 rate = 1.5
             print("Your Current Deposite Interest Rate: " + str(rate) + " %")
 
+        elif choice == 6:
+            option = ["1: Calculate Deposite Compount Interest based on your Current Balance",
+                      "2: Calculate Deposite Compount Interest based on your Deposite Input"]
+            for n in option:
+                print(n)
+            choice = int(input("Enter your choice: "))
+            if choice == 1:
+
     else:
         print("<< Error: Your User or Password does not match or it does not exist. >>")
         print("Have you created your BASE Account?\n")
