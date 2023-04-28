@@ -192,6 +192,7 @@ def mainmenu():
         print("<< ERROR: Your Choice " +
               str(option_mm) + "is not valid. >>")
         mainmenu()
+    exit()
 
 
 def exit():
