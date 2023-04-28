@@ -135,6 +135,20 @@ def login():
                 timing = str(
                     input("Enter the no of years you want to invest your money for: "))
                 money = str(input("Enter the amount you want to deposit: "))
+                money = int(money)
+                if deposite > 50000:
+                    ratex = 3/100
+                elif deposite > 30000:
+                    ratex = 2/100
+                else:
+                    ratex = 1.5/100
+                print("Current Account Balance in " + timing +
+                      " years will be")
+                print(balanceInterest(money, ratex, timing))
+        else:
+            print("<< Error: Your Input Choice is Invalid! Try Again >>")
+            login()
+
     else:
         print("<< Error: Your User or Password does not match or it does not exist. >>")
         print("Have you created your BASE Account?\n")
