@@ -104,6 +104,9 @@ def login():
             currentBalance = currentBalance + deposite
             print("Current Account Balance: " + str(currentBalance))
 
+        elif choice == 5:
+            print("Current Account Balance: " + str(currentBalance))
+
     else:
         print("<< Error: Your User or Password does not match or it does not exist. >>")
         print("Have you created your BASE Account?\n")
