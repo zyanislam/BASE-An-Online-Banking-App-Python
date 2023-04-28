@@ -120,6 +120,14 @@ def login():
                 print(n)
             choice = int(input("Enter your choice: "))
             if choice == 1:
+                timing = str(
+                    input("Enter the no of years you want to invest your money for: "))
+                if deposite > 50000:
+                    ratex = 3/100
+                elif deposite > 30000:
+                    ratex = 2/100
+                else:
+                    ratex = 1.5/100
 
     else:
         print("<< Error: Your User or Password does not match or it does not exist. >>")
