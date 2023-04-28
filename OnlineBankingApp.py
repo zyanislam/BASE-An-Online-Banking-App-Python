@@ -70,11 +70,19 @@ def login():
             print("Current Account Balance: " + currentBalance)
         elif choice == 2:
             print("Current Account Balance: " + currentBalance)
+            withdraw = int(input("Enter the amount you want to withdraw: "))
+            if withdraw > currentBalance:
+                print("Your current account balace is not sufficient for a transaction.")
+            else:
+                currentBalance = currentBalance + withdraw
+                print(str(withdraw) +
+                      " has been withdrawn from your current account.")
+                print("Current Account Balance: " + currentBalance)
         elif choice == 3:
             print("Current Account Balance: " + currentBalance)
         elif choice == 4:
             print("Current Account Balance: " + currentBalance)
-            deposite = int(input("Enter the ammount you want to deposit: "))
+            deposite = int(input("Enter the amount you want to deposit: "))
             currentBalance = currentBalance + deposite
             int("Current Account Balance: " + currentBalance)
 
