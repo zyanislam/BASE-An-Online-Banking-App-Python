@@ -177,6 +177,7 @@ def login():
             print("Please create your BASE Account first.")
             print(">> Redirecting to BASE SignUp.")
             signUp()
+    exit()
 
 
 def mainmenu():
