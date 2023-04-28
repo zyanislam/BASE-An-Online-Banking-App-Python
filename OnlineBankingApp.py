@@ -200,5 +200,10 @@ def exit():
     answer = str(input("Enter your choice: "))
 
     if answer == "Y":
-        log
+        print("Thank you for using BASE.")
     elif answer == "N":
+        login()
+    else:
+        print("<< ERROR: Your Choice " +
+              str(answer) + "is not valid. >>")
+        mainmenu()
