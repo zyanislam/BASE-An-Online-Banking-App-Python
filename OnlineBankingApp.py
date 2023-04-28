@@ -177,3 +177,10 @@ def login():
             print("Please create your BASE Account first.")
             print(">> Redirecting to BASE SignUp.")
             signUp()
+
+
+def mainmenu():
+    print("1: Sign Up to BASE")
+    print("2: Login to your BASE Account")
+    option_mm = int(input("Enter your choice: "))
+    if
