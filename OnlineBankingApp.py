@@ -67,10 +67,10 @@ def login():
         currentBalance = 0
 
         if choice == 1:
-            print("Current Account Balance: " + currentBalance)
+            print("Current Account Balance: " + str(currentBalance))
 
         elif choice == 2:
-            print("Current Account Balance: " + currentBalance)
+            print("Current Account Balance: " + str(currentBalance))
             withdraw = int(input("Enter the amount you want to withdraw: "))
             if withdraw > currentBalance:
                 print("Your current account balace is not sufficient for a transaction.")
@@ -78,10 +78,10 @@ def login():
                 currentBalance = currentBalance - withdraw
                 print(str(withdraw) +
                       " has been withdrawn from your current account.")
-                print("Current Account Balance: " + currentBalance)
+                print("Current Account Balance: " + str(currentBalance))
 
         elif choice == 3:
-            print("Current Account Balance: " + currentBalance)
+            print("Current Account Balance: " + str(currentBalance))
             destination = str(input("Enter the 8 digit account no: "))
             if len(destination) == 8:
                 amount = int(input("Enter the amount you want to transfer: "))
@@ -90,12 +90,15 @@ def login():
                         "Your current account balace is not sufficient for a transaction.")
                 else:
                     currentBalance = currentBalance - amount
+                    print(str(withdraw) +
+                          " has been transfered from your current account to amount " + destination)
+                    print("Current Account Balance: " + str(currentBalance))
 
         elif choice == 4:
-            print("Current Account Balance: " + currentBalance)
+            print("Current Account Balance: " + str(currentBalance))
             deposite = int(input("Enter the amount you want to deposit: "))
             currentBalance = currentBalance + deposite
-            int("Current Account Balance: " + currentBalance)
+            print("Current Account Balance: " + str(currentBalance))
 
     else:
         print("<< Error: Your User or Password does not match or it does not exist. >>")
@@ -117,7 +120,8 @@ def login():
             elif choice == 2:
                 forgotPin()
             else:
-                print("<< ERROR: Your Choice " + choice + "is not valid. >>")
+                print("<< ERROR: Your Choice " +
+                      str(choice) + "is not valid. >>")
                 login()
 
         elif inp == 2:
